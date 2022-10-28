@@ -17,9 +17,9 @@ export const header = {
 };
 
 export const nav = [
-  { name: "About", href: "/" },
-  { name: "Workouts", href: "/" },
-  { name: "Contact", href: "/" },
+  { name: "About", href: "#about" },
+  { name: "Workouts", href: "#workouts" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export const banner = {

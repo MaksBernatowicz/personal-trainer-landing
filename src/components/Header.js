@@ -11,7 +11,9 @@ import NavMobile from "./NavMobile";
 import { RiMenu4Fill, RiCloseFill } from "react-icons/ri";
 
 const Header = () => {
+  // header state
   const [isActive, setIsActive] = useState(false);
+  // nav mobile state
   const [navMobile, setNavMobile] = useState(false);
 
   useEffect(() => {
@@ -22,28 +24,20 @@ const Header = () => {
   });
 
   // destructure header data
-  const { logo, btnLoginText, btnSignupText } = header;
+  const { logo } = header;
   return (
     <header
       className={`${
-        isActive ? "bg-neutral-500 py-[16px]" : "bg-opacity-60 py-[20px]"
-      } fixed max-w-[1440px] left-0 right-0 mx-auto flex justify-between items-center px-[20px] lg:px-[80px] z-30 transition-all duration-300`}
+        isActive ? "bg-neutral-500 py-[16px]" : "bg-transparent py-[20px]"
+      } fixed max-w-[1440px] left-0 right-0 mx-auto flex justify-start items-center px-[20px] lg:px-[80px] z-30 transition-all duration-300`}
     >
       {/* logo */}
       <a href="/">
-        <img className="h-[30px]" src={logo} alt="" />
+        <img className="h-[30px] mr-[100px]" src={logo} alt="logo" />
       </a>
 
       {/* nav - initially hidden - show in desktop mode */}
       <Nav />
-
-      {/* buttons - initally hidden - show in desktop mode */}
-      <div className="hidden lg:flex space-x-4">
-        <button className="btn btn-sm text-white hover:text-primary-200 transition">
-          {btnLoginText}
-        </button>
-        <button className="btn btn-sm btn-primary">{btnSignupText}</button>
-      </div>
 
       {/* nav menu button - hide on desktop */}
       <div
@@ -58,7 +52,7 @@ const Header = () => {
       </div>
 
       {/* nav mobile - hide on desktop */}
-      <NavMobile navMobile={navMobile} />
+      <NavMobile navMobile={navMobile} setNavMobile={setNavMobile} />
     </header>
   );
 };

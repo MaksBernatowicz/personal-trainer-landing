@@ -10,7 +10,7 @@ const Workouts = () => {
   // destructure workouts data
   const { title, icon } = workouts;
   return (
-    <section className="section">
+    <section id="workouts" className="section">
       {/* section title */}
       <div
         className="section-title-group max-w-[540px] mx-auto px-4 lg:px-0"
