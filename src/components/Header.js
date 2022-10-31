@@ -51,7 +51,7 @@ const Header = () => {
         )}
       </div>
 
-      {/* nav mobile - hide on desktop */}
+      {/* nav mobile - hide on desktop and hide on Navmobile click*/}
       <NavMobile navMobile={navMobile} setNavMobile={setNavMobile} />
     </header>
   );

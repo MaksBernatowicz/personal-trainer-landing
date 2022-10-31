@@ -7,10 +7,13 @@ import YogaImg from "../src/assets/img/workouts/yoga.png";
 import FullBodyImg from "../src/assets/img/workouts/full-body.png";
 import FitnessImg from "../src/assets/img/workouts/fitness.png";
 import BattleRopeImg from "../src/assets/img/workouts/battle-rope.png";
-import JoinImg from "../src/assets/img/join/woman.png";
 // icons
 import UsersIcn from "../src/assets/img/about/icons/users-icn.svg";
 import CalendarIcn from "../src/assets/img/workouts/icons/calendar.svg";
+// contact icons
+import { MdMail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 export const header = {
   logo: Logo,
@@ -77,10 +80,30 @@ export const workouts = {
 };
 
 export const contact = {
-  image: JoinImg,
-  title: "Wanna be fit & have fun?",
-  subtitle: "It's the first step to change your life. Let me help you!",
-  btnText: "Contact me",
+  title: "Contact",
+  contacts: [
+    {
+      name: "Instagram",
+      data: "@honorataosip",
+      href: "https://www.instagram.com/honorataosip/",
+      text: "text me",
+      icon: <AiFillInstagram />,
+    },
+    {
+      name: "email",
+      data: "honorataosip@op.pl",
+      href: "mailto:honorataosip@op.pl",
+      text: "send an email",
+      icon: <MdMail />,
+    },
+    {
+      name: "phone",
+      data: "(+48) 698-117-276",
+      href: "tel:+48698117276",
+      text: "call me",
+      icon: <FaPhoneAlt />,
+    },
+  ],
 };
 
 export const footer = {
