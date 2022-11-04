@@ -108,5 +108,5 @@ export const contact = {
 
 export const footer = {
   logo: Logo,
-  copyrightText: "Honorata Osip - trener personalny © 2022 ",
+  copyrightText: "Trener personalny © 2022 ",
 };

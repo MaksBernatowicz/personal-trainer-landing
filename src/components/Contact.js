@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="container mx-auto px-[20px] lg:px-[135px]">
         {/* section title */}
         <div
-          className="section-title-group justify-start"
+          className="section-title-group justify-center"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -29,7 +29,12 @@ const Contact = () => {
             // destructure contactInfo
             const { name, data, href, text, icon } = contactInfo;
             return (
-              <div key={idx}>
+              <div
+                key={idx}
+                className="section-title-group justify-center"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <div
                   className="w-[350px] h-[150px] lg:h-[350px] bg-neutral-500
                 flex flex-col justify-center mx-auto p-[65px] rounded-[12px]  
